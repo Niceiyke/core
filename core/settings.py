@@ -74,7 +74,7 @@ CELERY_BROKER_URL= 'redis://localhost:6379'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangoredict',
+        'NAME': 'djangopredict',
         'USER': 'niceiyke',
         'PASSWORD': 'password',
         'HOST': 'localhost',
