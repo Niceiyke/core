@@ -1,5 +1,6 @@
 web: gunicorn core.wsgi:application --log-file - --log-level debug
 heroku ps:scale web=1
+python manage.py makemigrations
 python manage.py migrate
 echo 'worker: python manage.py celery worker --loglevel=info' >> Procfile
 echo 'celery_beat: python manage.py celery beat --loglevel=info' >> Procfile
