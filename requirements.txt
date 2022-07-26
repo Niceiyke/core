@@ -13,3 +13,4 @@ selenium==4.3.0
 gunicorn
 psycopg2
 redis
+honcho==0.5.0'
