@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1nmvg=wafl3h*5x+7zzo*(2e$ma@)61@3c_pdv3mkrczd**kaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['djangopredict.herokuapp.com']
 
