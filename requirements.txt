@@ -11,6 +11,6 @@ pandas
 scipy
 selenium==4.3.0
 gunicorn
-psycopg2
+psycopg2-binary
 redis
 honcho==0.5.0
