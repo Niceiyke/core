@@ -76,7 +76,19 @@ CELERY_BROKER_URL= 'redis://localhost:6379'
 load_dotenv(find_dotenv())
 
 
-DATABASES['default'] =  dj_database_url.config()
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'hdjangoredict',
+        'USER': 'djangopredict',
+        'PASSWORD': 'djangopredict',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
