@@ -11,3 +11,4 @@ pandas
 scipy
 selenium==4.3.0
 gunicorn
+psycopg2
