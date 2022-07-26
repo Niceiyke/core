@@ -2,9 +2,7 @@
 from email.policy import default
 from pathlib import Path
 import os
-import dj_database_url
-import django_on_heroku
-from dotenv import load_dotenv, find_dotenv
+
 
 
 
@@ -70,25 +68,21 @@ ASGI_APPLICATION = 'core.asgi.application'
 CELERY_BROKER_URL= 'redis://localhost:6379'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-load_dotenv(find_dotenv())
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hdjangoredict',
-        'USER': 'djangopredict',
-        'PASSWORD': 'djangopredict',
+        'NAME': 'djangoredict',
+        'USER': 'niceiyke',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '',
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+
 
 
 # Password validation
