@@ -76,8 +76,7 @@ CELERY_BROKER_URL= 'redis://localhost:6379'
 load_dotenv(find_dotenv())
 
 
-DATABASES['default'] = dj_database_url.parse('postgres://gnqldchwwnvwvp:4b76b07e83d8c829090c2f52345716746db8704c8f87613587d2ff21ca2c7879@ec2-54-225-234-165.compute-1.amazonaws.com:5432/d92eenahvud355', conn_max_age=600)
-
+DATABASES['default'] =  dj_database_url.config()
 
 
 # Password validation
