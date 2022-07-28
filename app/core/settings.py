@@ -70,7 +70,6 @@ CELERY_BROKER_URL= 'redis://localhost:6379/0'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-load_dotenv(find_dotenv())
 
 DATABASES = {
     'default': {
@@ -81,10 +80,6 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASS'),
     }
 }
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
