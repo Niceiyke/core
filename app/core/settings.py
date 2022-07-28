@@ -2,10 +2,6 @@
 from email.policy import default
 from pathlib import Path
 import os
-import dj_database_url
-import django_on_heroku
-from dotenv import load_dotenv, find_dotenv
-
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -14,7 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1nmvg=wafl3h*5x+7zzo*(2e$ma@)61@3c_pdv3mkrczd**kaw'
+SECRET_KEY = os.environ.get('SECRET_KEY'),
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -67,7 +64,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 ASGI_APPLICATION = 'core.asgi.application'
 
 
-CELERY_BROKER_URL= 'redis://localhost:6379'
+CELERY_BROKER_URL= 'redis://localhost:6379/0'
 
 
 # Database
@@ -75,15 +72,13 @@ CELERY_BROKER_URL= 'redis://localhost:6379'
 
 load_dotenv(find_dotenv())
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hdjangoredict',
-        'USER': 'djangopredict',
-        'PASSWORD': 'djangopredict',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
     }
 }
 
