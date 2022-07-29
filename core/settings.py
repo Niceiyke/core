@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 ASGI_APPLICATION = 'core.asgi.application'
 
 
-CELERY_BROKER_URL= 'sqs://ABCDEFGHIJKLMNOPQRST:ZYXK7NiynGlTogH8Nj+P9nlE73sq3@'
+CELERY_BROKER_URL= 'sqs://AKIA4EQQAR2NZ5YZBNM3:fnfvT/Sz/wzkYYJPxEePW9CuIm8iytss+jH43QVT@'
 
 
 # Database
