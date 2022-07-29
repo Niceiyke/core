@@ -330,7 +330,7 @@ def ScrapeResult():
             obj.save()
             
             
-  @shared_task
+@shared_task
 def ScrapeResult2():
     urls = [
         'https://www.flashscore.com/football/argentina/liga-profesional',
@@ -946,7 +946,7 @@ def ScrapeResult3():
             obj.save()
           
         
- @shared_task
+@shared_task
 def ScrapeResult4():
     urls = [
         'https://www.flashscore.com/football/japan/j1-league',
