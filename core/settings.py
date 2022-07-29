@@ -5,6 +5,7 @@ import os
 import dj_database_url
 import django_on_heroku
 from dotenv import load_dotenv, find_dotenv
+from kombu.utils.url import safequote
 
 
 
@@ -67,7 +68,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 ASGI_APPLICATION = 'core.asgi.application'
 
 
-CELERY_BROKER_URL= sqs://
+    
+
+
+aws_access_key = safequote("AKIA4EQQAR2NZ5YZBNM3")
+aws_secret_key = safequote("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")
+
+CELERY_BROKER_URL = "sqs://{aws_access_key}:{aws_secret_key}@".format(
+    aws_access_key=aws_access_key, aws_secret_key=aws_secret_key,
+)
 
 
 # Database
