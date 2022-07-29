@@ -1,5 +1,5 @@
 Django==4.0.6
-celery==5.2.7
+celery[sqs]
 webdriver-manager==3.8.2
 django-on-heroku
 python-dotenv
