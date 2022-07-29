@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 ASGI_APPLICATION = 'core.asgi.application'
 
 
-CELERY_BROKER_URL= 'https://sqs.us-east-1.amazonaws.com/834330988187/mydkangoquee'
+CELERY_BROKER_URL= 'sqs://ABCDEFGHIJKLMNOPQRST:ZYXK7NiynGlTogH8Nj+P9nlE73sq3@'
 
 
 # Database
