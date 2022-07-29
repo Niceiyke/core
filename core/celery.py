@@ -28,6 +28,11 @@ app.conf.beat_schedule ={
      'scrape_result4':{
         'task':'scrape.tasks.ScrapeResult4',
         'schedule': 600.0
+    },
+    
+     'scrape_result5':{
+        'task':'scrape.tasks.ScrapeResult4',
+        'schedule': 600.0
     }
 }
 
