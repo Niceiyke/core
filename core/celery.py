@@ -14,6 +14,21 @@ app.conf.beat_schedule ={
         'task':'scrape.tasks.ScrapeResult',
         'schedule': 600.0
     }
+    
+    'scrape_result2':{
+        'task':'scrape.tasks.ScrapeResult2',
+        'schedule': 600.0
+    }
+    
+     'scrape_result3':{
+        'task':'scrape.tasks.ScrapeResult3',
+        'schedule': 600.0
+    }
+    
+     'scrape_result4':{
+        'task':'scrape.tasks.ScrapeResult4',
+        'schedule': 600.0
+    }
 }
 
 app.autodiscover_tasks()
