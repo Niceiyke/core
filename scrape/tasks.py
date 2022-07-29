@@ -947,7 +947,7 @@ def ScrapeResult3():
           
         
  @shared_task
-def ScrapeResult3():
+def ScrapeResult4():
     urls = [
         'https://www.flashscore.com/football/japan/j1-league',
         'https://www.flashscore.com/football/egypt/premier-league',
@@ -1256,7 +1256,7 @@ def ScrapeResult3():
             
             
 @shared_task
-def ScrapeResult4():
+def ScrapeResult5():
     urls = [
         'https://www.flashscore.com/football/sweden/allsvenskan',
         'https://www.flashscore.com/football/norway/obos-ligaen',
