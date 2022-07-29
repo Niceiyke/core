@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1nmvg=wafl3h*5x+7zzo*(2e$ma@)61@3c_pdv3mkrczd**kaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['predictiyke.herokuapp.com','djangopredict.herokuapp.com']
 
@@ -67,7 +67,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 ASGI_APPLICATION = 'core.asgi.application'
 
 
-CELERY_BROKER_URL= 'sqs://AKIA4EQQAR2NZ5YZBNM3:fnfvT/Sz/wzkYYJPxEePW9CuIm8iytss+jH43QVT@'
+CELERY_BROKER_URL= sqs://
 
 
 # Database
