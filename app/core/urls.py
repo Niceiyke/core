@@ -1,8 +1,8 @@
 
-from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
+from .views import IndexView,PredictView
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('scrape.urls'))
+urlpatterns=[
+    path('', IndexView,name='home'),
+    path('<str:pk>/',PredictView, name='league'),
 ]
